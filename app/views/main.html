@@ -1,0 +1,18 @@
+<div class="container" id="flickr">
+<div  ng-repeat="item in items" class="posts" >
+  <div class="row">
+    <div class="col-md-2 image-container">
+      <a ng-click="goListing(item)"><img class="post-image" ng-src="{{item.media.m}}"></a>
+    </div>
+    <div class="col-md-10 post-content">
+      <a ng-click="goListing(item)"><h4 class="post-title"> {{ item.title }} </h4></a>
+       <div class="row author-info">
+         <a class="col-sm-3" ng-href="https://www.flickr.com/people/{{ item.author_id }}"><button type="button" class="btn btn-success btn-xs">Post Author</button></a>
+          <h6 class="col-sm-4">Published:{{ item.published | date }} at {{item.published | date:'hh  a'}}</h6>
+         <a class="col-sm-3" href="{{item.link}}"><button type="button" class="btn btn-success btn-xs">View on Flickr</button></a>
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
